@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "110108161864",
+    "project_id": "scout-app-a711f",
+    "storage_bucket": "scout-app-a711f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110108161864:android:bfc8eb682b39bd89f0257d",
+        "android_client_info": {
+          "package_name": "com.example.scout_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwNKMLXtRYV2n_vDOsSK6dZxbFpSSSL1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
