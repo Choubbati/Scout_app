@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:scout_app/Auth/LoginPage.dart';
 import 'package:scout_app/constante.dart';
 import 'package:scout_app/onbording_screen/first_screen.dart';
 import 'package:scout_app/onbording_screen/second_screen.dart';
@@ -33,13 +34,28 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
               child: Image.asset(images[index]),
             ),
           ),
+          SizedBox(height: 20,),
           Expanded(
               child: Stack(
             children: [
               
               AnimatedPositioned(
-                left: isOut?width(context)+100:width(context)*.28,
+                left: isOut?width(context)+100:width(context)*.30,
                 child: Text(title[index],textAlign: TextAlign.center,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 110, 1, 152)),),
+                duration: Duration(milliseconds: 250),
+              )
+            ],
+          )),
+                    Expanded(
+              child: Stack(
+            children: [
+              
+              AnimatedPositioned(
+                right: isOut?width(context)+100: 0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(desciption[index],textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color:Colors.black))
+                ),
                 duration: Duration(milliseconds: 250),
               )
             ],
@@ -70,7 +86,15 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                       fontSize: 18, fontWeight: FontWeight.bold),
                 )),
                 InkWell(
-                    onTap: () {
+                     onTap: () {
+                    if (index == 2) {
+                      // إذا كانت القيمة 2، انتقل إلى صفحة تسجيل الدخول
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    } else {
+                      // تنفيذ التحرك بين الصفحات الأخرى
                       setState(() {
                         isOut = !isOut;
                       });
@@ -80,20 +104,22 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                           isOut = !isOut;
                         });
                       });
-                    },
+                    }},
                     child: Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 110, 1, 152),
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        child: Text(
-                          index == 2 ? "Login" : "Next",
-                          style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        )))
+                        child:  Text(
+                            index == 2 ? "Login" : "Next",
+                            style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ))
+             
               ],
             ),
           )
@@ -121,13 +147,15 @@ class CostumIndicator extends StatelessWidget {
 }
 
 List images = [
-  "lib/onbording_screen/assets/images/logo.png",
-  "lib/onbording_screen/assets/images/MAJMO3A.png",
-  "lib/onbording_screen/assets/images/bnowalid.png"
+  "assets/images/logo.png",
+  "assets/images/MAJMO3A.png",
+  "assets/images/bnowalid.png"
 ];
 
 List title = [
-  "No ads while \nlistening music",
-  "Listen to \nmusic offline",
-  "      share \nYour playlist"
+  "الكشفية\n الحسنية المغربية",
+  "فرع آسفي",
+  "مجموعة الأمل"
 ];
+
+List desciption = ["عضو الجامعة الوطنية","شرف الإنتماء" , 'مرحبا بك '];
