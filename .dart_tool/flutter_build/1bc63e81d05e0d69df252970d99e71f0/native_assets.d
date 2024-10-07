@@ -1,0 +1,1 @@
+ C:\\src\\projets\\scout_app\\.dart_tool\\flutter_build\\1bc63e81d05e0d69df252970d99e71f0\\native_assets.yaml: 

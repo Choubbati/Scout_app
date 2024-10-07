@@ -9,7 +9,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(Scout_app());
+  runApp(const Scout_app());
 }
 
 class Scout_app extends StatelessWidget {
@@ -23,7 +23,7 @@ class Scout_app extends StatelessWidget {
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       useMaterial3: true,
       ),
-      home: Scaffold(
+      home: const Scaffold(
         backgroundColor: Colors.white,
         body: OnbordingScreen(),
       ),

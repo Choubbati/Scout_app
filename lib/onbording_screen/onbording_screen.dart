@@ -28,18 +28,18 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                 });
               },
               controller: controller,
-              children: [FirstScreen(), SecondScreen(), ThiredScreen()],
+              children: const [FirstScreen(), SecondScreen(), ThiredScreen()],
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CostumIndicator(active: index == 0),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               CostumIndicator(active: index == 1),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               CostumIndicator(active: index == 2),
@@ -50,18 +50,18 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(child: Text(index==2?"Register":"Skip",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)),
+                InkWell(child: Text(index==2?"Register":"Skip",style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)),
                 InkWell(
                   onTap: () {
-                    controller.animateToPage(index + 1, duration: Duration(milliseconds: 250), curve: Curves.linear);
+                    controller.animateToPage(index + 1, duration: const Duration(milliseconds: 250), curve: Curves.linear);
                   },
                     child: Container(
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                         color: Color.fromARGB(255, 6, 108, 10),
+                         color: const Color.fromARGB(255, 6, 108, 10),
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        child: Text(index==2?"Login":"Next",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)))
+                        child: Text(index==2?"Login":"Next",style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)))
               ],
             ),
           )
@@ -78,10 +78,10 @@ class CostumIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
-          color: active ? Color.fromARGB(255, 6, 108, 10) : Colors.grey),
+          color: active ? const Color.fromARGB(255, 6, 108, 10) : Colors.grey),
       width: active ? 30 : 10,
       height: 10,
     );

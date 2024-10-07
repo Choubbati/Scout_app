@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.scout_app-mergeDebugResources-27:/values-fa/values-fa.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\choub\\.gradle\\caches\\transforms-3\\7484110c9f4b89fd8f7786b1f148b118\\transformed\\core-1.13.1\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,355,455,556,662,779",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "149,251,350,450,551,657,774,875"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,355,455,556,662,934",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "149,251,350,450,551,657,774,1030"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\choub\\.gradle\\caches\\transforms-3\\4b50a388f8a7e65d00d4dc9972492fe8\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-fa\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "150",
+                        "endOffsets": "345"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "779",
+                        "endColumns": "154",
+                        "endOffsets": "929"
+                    }
+                }
+            ]
+        }
+    ]
+}
