@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 
 class CostumeButton extends StatelessWidget {
   const CostumeButton({
-    super.key,
+    super.key, required this.txt, required this.clr,required this.icon
   });
+
+  final String txt;
+  final Color clr;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +19,13 @@ class CostumeButton extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
          borderRadius: BorderRadius.circular(13),
-         color: const Color.fromARGB(255, 110, 1, 152),
+         color:  clr,
         ),
-        child: Center(child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)),
-      ),
+        child: Center(
+          child: Text(txt,style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold,),
+                ),
+        ),)
+        
     );
   }
 }
